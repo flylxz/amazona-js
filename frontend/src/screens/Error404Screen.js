@@ -1,5 +1,6 @@
 export const Error404Screen = {
-    render: () => {
-        return `<div>Page not Found</div>`
-    }
+  after_render: () => {},
+  render: () => {
+    return `<div>Page not Found</div>`;
+  },
 };

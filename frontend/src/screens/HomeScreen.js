@@ -2,6 +2,7 @@ import axios from 'axios';
 import { Rating } from '../components/Rating';
 
 export const HomeScreen = {
+  after_render: () => {},
   render: async () => {
     const response = await axios({
       url: 'http://localhost:5000/api/products',
