@@ -38,7 +38,7 @@ export const signin = async ({ email, password }) => {
     }
     return response.data;
   } catch (err) {
-    console.log(err);
-    return { error: err.response.data.message || err.message };
+    console.log(err.response);
+    return { error: err.response.data.massage || err.message };
   }
 };

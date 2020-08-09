@@ -15,6 +15,7 @@ userRouter.get(
         password: 'jsamazona',
         isAdmin: true,
       });
+      console.log(user);
       const createdUser = await user.save();
       res.send(createdUser);
     } catch (err) {
