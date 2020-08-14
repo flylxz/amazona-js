@@ -1,6 +1,6 @@
 import { getUserInfo } from '../localStorage';
 
-const Header = {
+export const Header = {
   render: () => {
     const { name } = getUserInfo();
     return `
@@ -20,5 +20,3 @@ const Header = {
   },
   after_render: () => {},
 };
-
-export default Header;

@@ -3,7 +3,6 @@ import { Rating } from '../components/Rating';
 import { showLoading, hideLoading } from '../utils';
 
 export const HomeScreen = {
-  after_render: () => {},
   render: async () => {
     showLoading();
     const response = await axios({
