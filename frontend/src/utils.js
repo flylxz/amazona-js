@@ -1,3 +1,5 @@
+import { getCartItems } from './localStorage';
+
 export const parseRequestUrl = () => {
   const url = document.location.hash.toLocaleLowerCase();
   const request = url.split('/');
@@ -39,4 +41,12 @@ export const showMessage = (message, callback) => {
         callback();
       }
     });
+};
+
+export const redirectUser = () => {
+  if (getCartItems().lenght !== 0) {
+    document.location.hash = '/shipping';
+  } else {
+    document.location.hash = '/';
+  }
 };

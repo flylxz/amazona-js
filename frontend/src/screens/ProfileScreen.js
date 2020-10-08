@@ -1,5 +1,10 @@
 import { update } from '../api';
-import { setUserInfo, getUserInfo, clearUser } from '../localStorage';
+import {
+  setUserInfo,
+  getUserInfo,
+  clearUser,
+  getShipping,
+} from '../localStorage';
 import { showLoading, hideLoading, showMessage } from '../utils';
 
 export const ProfileScreen = {
@@ -34,6 +39,9 @@ export const ProfileScreen = {
     if (!name) {
       document.location.hash = '/';
     }
+
+    const { address, city, postalCode, country } = getShipping();
+
     return `
         <div class="form-container">
             <form id="profile-form">

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon --watch backend --exec babel-node backend/server.js"
+    "serve": "nodemon --watch backend --exec babel-node backend/server.js"
   },
   "license": "MIT",
   "dependencies": {
